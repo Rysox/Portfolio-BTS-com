@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #3a8dde 0%, #7b2ff2 100%);
+      color: #fff;
+    }
+    header {
+      padding: 2rem 0;
+      text-align: center;
+      background: rgba(34, 34, 68, 0.7);
+      box-shadow: 0 2px 8px rgba(60, 60, 120, 0.15);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #3a8dde, #7b2ff2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(60, 60, 120, 0.12);
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #3a8dde, #7b2ff2);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(60, 60, 120, 0.15);
+    }
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(60, 60, 120, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mon Portfolio</h1>
+  </header>
+  <main>
+    <h2>Bienvenue !</h2>
+    <p>
+      Ceci est un exemple de page décorée avec un dégradé bleu-violet.<br>
+      Ajoutez ici vos projets, votre présentation, etc.
+    </p>
+    <button class="btn">Voir mes projets</button>
+  </main>
