@@ -3,66 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #3a8dde 0%, #7b2ff2 100%);
-      color: #fff;
-    }
-    header {
-      padding: 2rem 0;
-      text-align: center;
-      background: rgba(34, 34, 68, 0.7);
-      box-shadow: 0 2px 8px rgba(60, 60, 120, 0.15);
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      background: linear-gradient(90deg, #3a8dde, #7b2ff2);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 4px 24px rgba(60, 60, 120, 0.12);
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(90deg, #3a8dde, #7b2ff2);
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(60, 60, 120, 0.15);
-    }
-    .btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 6px 20px rgba(60, 60, 120, 0.25);
-    }
-  </style>
 </head>
 <body>
+  <audio id="bg-music" src="audio/Midnas Lament  Twilight Princess [Remastered].mp3" loop></audio>
+  <button id="play-music" class="btn play-btn" aria-label="Lancer la musique">
+    <svg width="120" height="120" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="15" fill="#3a8dde" stroke="#fff" stroke-width="2"/>
+      <polygon points="13,10 24,16 13,22" fill="#fff"/>
+        </svg>
+        </button>
+  <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5" aria-label="Volume musique">
   <header>
     <h1>Mon Portfolio</h1>
-  </header>
+    <div class="header-buttons">
+    <div class="header-buttons"> 
+</div>
+  </div>
+</header>
   <main>
-    <h2>Bienvenue !</h2>
-    <p>
-      Ceci est un exemple de page décorée avec un dégradé bleu-violet.<br>
-      Ajoutez ici vos projets, votre présentation, etc.
-    </p>
-    <button class="btn">Voir mes projets</button>
+    <div id="welcome-zone">
+      
+      <h2>Bienvenue sur ma page !</h2>
+      <p>
+        Je suis ravi de vous accueillir sur mon portfolio. Ici, vous trouverez une sélection de mes projets récents et de mes réalisations.
+        J'espère que vous apprécierez la visite et que vous trouverez de l'inspiration dans mon travail.
+        N'hésitez pas à cliquer sur le bouton en haut a droite pour une découverte musicale de mon univers.
+        En vous souhaitant une agréable visite. 
+      </p>
+    </div>
+    <button class="btn" id="show-projects">Voir mes projets</button>
   </main>
+  <img src="images/Snapchat-447011779.jpg" alt="Ma photo" id="welcome-img">
+
+ <div id="project-zone">
+  <div class="project-nav">
+    <button class="btn nav-btn" id="back-btn">Retour</button>
+    <button class="btn nav-btn" id="next-btn">Suivant</button>
+  </div>
+    <img id="project-img"
+         src="images/Screenshot_20250721_174704_Instagram.jpg"
+         alt="Projet">
+    
+    <img id ="project-img-2"
+         src="images/20240719_225745.jpg"
+         alt="Projet 2">
+  
+    <div id="project-text">
+      <h2>Petit à propos</h2>
+      <p>
+        Fan de photo de réseau sociaux et de technique de communication j'adore parler et partager mes passions.
+        voici deux photo dont je suis particulièrement fier.
+        la première je fesais mon sport quotidien et j'ai trouver que le ciel était magnifique et que cela méritait d'être capturé.
+        et la seconde je l'ai prise lors d'une captation vidéo que j'ai réalisé pour made in sud. malgré la qualité de la photo je trouve qu'elle représente bien l'ambiance de l'évènement.
+        J'espère que vous apprécierez ces images autant que j'ai aimé les capturer.
+      </p>
+    </div>
+  </div>
+
+<div id="vidéo-zone" style="display:none; position:relative;">
+  <div class="video-nav">
+    <button class="btn nav-btn" id="back-btn-video">Retour</button>
+  </div>
+  <div class="video-row">
+    <video id="project-vidéo-1" controls>
+      <source src="video/20240719_225745.mp4" type="video/mp4">
+    </video>
+    <video id="project-video" controls>
+      <source src="video/20240719_225745.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="video-text">
+    <h2>Vidéo de présentation</h2>
+    <p>
+      Voici 2 vidéo que j'ai monté pour 2 projets différents.
+      L'une est pour le compte Facebook de Cache ton Cailloux à La Crau en 2021 et l'autre pour la page de Made in Sud en 2024.
+      J'ai adoré travailler sur ces projets et j'espère que vous apprécierez le résultat.
+    </p>
+  </div>
+</div>
+
+  <script>
+    const playBtn = document.getElementById('play-music');
+const audio = document.getElementById('bg-music');
+const volumeControl = document.getElementById('volume-control');
+const svg = playBtn.querySelector('svg');
+const polygon = svg.querySelector('polygon');
+
+
+function setPlayIcon(isPlaying) {
+  if (isPlaying) {
+    polygon.setAttribute('points', '12,10 15,10 15,22 12,22 17,10 20,10 20,22 17,22');
+  } else {
+    polygon.setAttribute('points', '13,10 24,16 13,22');
+  }
+}
+playBtn.addEventListener('click', function() {
+  if (audio.paused) {
+    audio.volume = volumeControl.value;
+    audio.play();
+    setPlayIcon(true);
+  } else {
+    audio.pause();
+    setPlayIcon(false);
+  }
+});
+volumeControl.addEventListener('input', function() {
+  audio.volume = this.value;
+});
+audio.addEventListener('pause', () => setPlayIcon(false));
+audio.addEventListener('play', () => setPlayIcon(true));
+setPlayIcon(false);
+
+
+function showAccueil() {
+  document.querySelector('main').style.display = 'block';
+  document.getElementById('welcome-img').style.display = 'block';
+  document.getElementById('project-zone').style.display = 'none';
+  document.getElementById('vidéo-zone').style.display = 'none';
+  if (document.getElementById('third-zone')) document.getElementById('third-zone').style.display = 'none';
+}
+
+function showProjet() {
+  document.querySelector('main').style.display = 'none';
+  document.getElementById('welcome-img').style.display = 'none';
+  document.getElementById('project-zone').style.display = 'block';
+  document.getElementById('vidéo-zone').style.display = 'none';
+  if (document.getElementById('third-zone')) document.getElementById('third-zone').style.display = 'none';
+}
+
+function showVideo() {
+  document.querySelector('main').style.display = 'none';
+  document.getElementById('welcome-img').style.display = 'none';
+  document.getElementById('project-zone').style.display = 'none';
+  document.getElementById('vidéo-zone').style.display = 'block';
+  if (document.getElementById('third-zone')) document.getElementById('third-zone').style.display = 'none';
+}
+
+function showThird() {
+  document.querySelector('main').style.display = 'none';
+  document.getElementById('welcome-img').style.display = 'none';
+  document.getElementById('project-zone').style.display = 'none';
+  document.getElementById('vidéo-zone').style.display = 'none';
+  if (document.getElementById('third-zone')) document.getElementById('third-zone').style.display = 'block';
+}
+
+
+document.getElementById('show-projects').addEventListener('click', showProjet);
+
+
+document.getElementById('back-btn').addEventListener('click', showAccueil);
+
+
+document.getElementById('next-btn').addEventListener('click', showVideo);
+
+
+document.getElementById('back-btn-video').addEventListener('click', showProjet);
+
+
+if (document.getElementById('third-zone') && document.getElementById('next-btn-3')) {
+  document.getElementById('next-btn-3').addEventListener('click', showThird);
+}
+
+if (document.getElementById('back-btn-video')) {
+  document.getElementById('back-btn-video').addEventListener('click', showProjet);
+}
+
+  </script>
+</body>
+
