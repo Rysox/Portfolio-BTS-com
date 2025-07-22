@@ -70,8 +70,8 @@ main {
 }
 
 #welcome-img {
-  width: 300px;      /* Choisis la largeur souhaitée */
-  height: 400px; /* Hauteur égale à la largeur pour un carré */
+  width: 300px;      
+  height: 500px; 
   border-radius: 16px;
   margin-bottom: 1rem;
   position: center;
